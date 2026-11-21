@@ -1,1 +1,22 @@
 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int hour = 9;
+    long long fare = 3000;
+    double amount = 25.50;
+    bool peak = true;
+
+    cout << "Hour: " << hour << '\n';
+    cout << "Fare in paise: " << fare << '\n';
+    cout << "Amount: " << amount << '\n';
+    cout << "Peak: " << boolalpha << peak << '\n';
+
+    cout << "Size of int: " << sizeof(int) << '\n';
+    cout << "Size of long long: " << sizeof(long long) << '\n';
+    cout << "Size of double: " << sizeof(double) << '\n';
+
+    return 0;
+}
