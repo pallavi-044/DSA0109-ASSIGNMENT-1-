@@ -2,35 +2,26 @@
 #include <iostream>
 using namespace std;
 
-class SmartCard {
-private:
-    int balance;
-
-public:
-    SmartCard(int b) {
-        balance = b;
-    }
-
-    void deduct(int fare) {
-        if (balance - fare >= 5000) {
-            balance -= fare;
-            cout << "Journey successful\n";
-        } else {
-            cout << "Insufficient balance\n";
-        }
-    }
-
-    void display() {
-        cout << "Balance: Rs " << balance / 100 << '\n';
-    }
-};
-
 int main() {
-    SmartCard card(10000);
+    long long journeys[] = {
+        20000, 500000, 3000000
+    };
 
-    card.deduct(2000);
-    card.display();
+    long long fare = 1000;
+
+    for (int i = 0; i < 3; i++) {
+        long long total = journeys[i] * fare;
+
+        double doubleTotal = journeys[i] * 10.0;
+
+        cout << "Journeys: " << journeys[i] << '\n';
+
+        cout << "Long long total (paise): "
+             << total << '\n';
+
+        cout << "Double total (rupees): "
+             << doubleTotal << "\n\n";
+    }
 
     return 0;
 }
-
