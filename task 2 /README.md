@@ -1,25 +1,26 @@
+
 #include <iostream>
 using namespace std;
 
+enum class Zone {
+    Inner, Middle, Outer
+};
+
+constexpr int INNER_FARE = 1000;
+constexpr int MIDDLE_FARE = 2000;
+constexpr int OUTER_FARE = 3000;
+
+constexpr int MIN_BALANCE = 5000;
+
 int main() {
-    const int INNER_FARE = 10;
-    const int MIDDLE_FARE = 20;
-    const int OUTER_FARE = 30;
+    cout << "Inner Fare: " << INNER_FARE / 100 << '\n';
+    cout << "Middle Fare: " << MIDDLE_FARE / 100 << '\n';
+    cout << "Outer Fare: " << OUTER_FARE / 100 << '\n';
+    cout << "Minimum Balance: " << MIN_BALANCE / 100 << '\n';
 
-    enum Zone {
-        INNER = 1,
-        MIDDLE = 2,
-        OUTER = 3
-    };
+    return 0;
+}
 
-    Zone passengerZone = MIDDLE;
-
-    cout << "Metro Fare System" << endl;
-    cout << "Inner Fare: Rs. " << INNER_FARE << endl;
-    cout << "Middle Fare: Rs. " << MIDDLE_FARE << endl;
-    cout << "Outer Fare: Rs. " << OUTER_FARE << endl;
-
-    cout << "Selected Zone: ";
 
     if (passengerZone == INNER) {
         cout << "Inner" << endl;
